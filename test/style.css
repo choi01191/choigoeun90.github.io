@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본 레이아웃</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body,html{widows: 100%;}
+        a{text-decoration:none;}
+        ul{list-style:none;}
+        .wrap{clear: both; width:100%;}
+/*        헤더 영영설정*/
+        .hd{width: 100%; height: 140px; background-color:#fff; overflow:hidden; border-bottom:3px solid #333;}
+        .logo{display:block; width: 120px;height: 50px;position:absolute; top:30px; left: 150px;}
+        #tnb{float:right;margin-right: 150px}
+        #gnb{clear:both;float:right;margin-right: 150px}
+        .menu{clear:both;margin-top: 15px;}
+        .menu li{float:left;padding: 15px;}
+        .menu a{color:#333;font-size: 15px;font-weight: bold}
+        .menu li a:hover{color:#3d69bc}
+        #gnb.menu li{padding: 15px;padding-left: 15px}
+        #gnb.menu a {font-size:18px;}
+        
+        .contents{width: 100%}
+        .vs{width: 1200px;margin: 0 auto}
+            
+        .page{clear:both; width:100vw;overflow: hidden;border-top:1px solid #ccc;}
+        .page_tit{text-align: center;line-height: 3.6;}
+        .lst, #notice, .sitemap{width: 1200px;margin:0 auto;}
+        
+        #page1 {background: #ececec;}
+        .lst li{float: left;width: 400px;}
+        .lst_tit{line-height: 2.4; padding-left: 15px;}
+        .lst li a {color:#333;}
+        .lst_com{padding: 15px;}
+        
+        #notice{display: table;}
+        #notice tr{display: table-row;}
+        #notice th, #notice td{display:table-cell;border: 1px solid #333; height: 48px;}
+        .n_num { width:5%;text-align:center;}
+        .n_date { width: 10%;text-align: center;}
+        .n_title { width: 84%;}
+        .n_title a{ display: block;padding: 5px;padding-left: 10px;color: #333;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;padding-right: 10px;width: 960px;}
+        .n_title a:hover {color:#f60;}
+        
+        #page3 {background-color: #2c2c2c;}
+        #page3 .page_tit{color: #fff;}
+        .sitemap{color: #ccc}
+        .site li{float: left;width:16%;border-right: 1px solid#444;}
+        .site li dt {font-size:18px;line-height: 4;text-align: center;}
+        .site li a {display: block;line-height: 3;color:#fff;padding-left: 28px;}
+        .ft{clear:both; width: :100%; height: 120px;line-height: 60px;background: #123826;}
+        .addr{padding-left: 120px;color: :#ccc;}
+        .copyright{padding-left: 120px;color: #fff;}
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="hd">
+<!--        헤더시작-->
+           <a href="" class="logo"><img src="https://placehold.it/120x50/333" alt="로고"></a>
+           <nav id="tnb">
+               <ul class="menu">
+                   <li><a href="">상단1</a></li>
+                   <li><a href="">상단2</a></li>
+                   <li><a href="">상단3</a></li>
+               </ul>
+           </nav>
+           <nav id="gnb">
+               <ul class="menu">
+                   <li><a href="">메인1</a></li>
+                   <li><a href="">메인2</a></li>
+                   <li><a href="">메인3</a></li>
+                   <li><a href="">메인4</a></li>
+                   <li><a href="">메인5</a></li>
+               </ul>
+           </nav>  
+        </header>              
+        <main class="contents">
+        <figure class="vs"><img src="https://placehold.it/1200x400/333" alt="배너" class="pic">
+        </figure>
+        <div class="page" id="page1">
+            <h2 class="page_tit">포토 갤러리</h2>
+            <ul class="lst">
+                <li class="item1"><a href="">
+                        <img src="https://placehold.it/330x200" alt="" class="thumb">
+                        <h3 class="lit_tit">목록제목1</h3>
+                        <p class="lst_com">목록내용1</p>
+                    </a></li>
+                <li class="item2"><a href="">
+                        <img src="https://placehold.it/330x200" alt="" class="thumb">
+                        <h3 class="lit_tit">목록제목2</h3>
+                        <p class="lst_com">목록내용2</p>
+                    </a></li>
+                <li class="item3"><a href="">
+                        <img src="https://placehold.it/330x200" alt="" class="thumb">
+                        <h3 class="lit_tit">목록제목3</h3>
+                        <p class="lst_com">목록내용3</p>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="page" id="page2">
+            <h2 class="page_tit">공지사항</h2>
+               <table id="notice">
+                <thead>
+                    <tr>
+                        <th class="n_num">번호</th>
+                        <th class="n_title">제목</th>
+                        <th class="n_date">등록일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="n_mum">5</td>
+                        <td class="n_title">
+                           <a href="">공지사항 제목 클릭시 이동5</a></td>
+                            
+                        <td class="n_date">2019-09-10</td>
+                    </tr>
+                    <tr>
+                        <td class="n_mum">4</td>
+                        <td class="n_title">
+                            <a href="">공지사항 제목 클릭시 이동4</a></td>
+                        <td class="n_date">2019-09-09</td>
+                    </tr>
+                    <tr>
+                        <td class="n_mum">3</td>
+                        <td class="n_title">
+                            <a href="">공지사항 제목 클릭시 이동3</a></td>
+                        <td class="n_date">2019-09-08</td>
+                    </tr>
+                    <tr>
+                        <td class="n_mum">2</td>
+                        <td class="n_title">
+                            <a href="">공지사항 제목 클릭시 이동2</a></td>
+                        <td class="n_date">2019-09-07</td>
+                    </tr>
+                </tbody>
+            </table>
+                <div class="page" id="page3">
+            <h2 class="page_tit">페이지 제목3</h2>
+        </div>    
+                <div class="sitemap">
+                    <ul class="site">
+                        <li class="cate1">
+                            <dl>
+                                <dt>카테고리1</dt>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate2">
+                            <dl>
+                                <dt>카테고리2</dt>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate3">
+                            <dl>
+                                <dt>카테고리3</dt>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate4">
+                            <dl>
+                                <dt>카테고리4</dt>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate5">
+                            <dl>
+                                <dt>카테고리5</dt>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                            </dl>
+                        </li>
+                        <li class="cate6">
+                            <dl>
+                                <dt>카테고리6</dt>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                                <dd><a href="">사이트링크</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            
+        </div>
+
+        </main>
+        <footer class="ft">
+            <p class="addr">대전시 유성구 지족동로 124, 107동 701호</p>
+            <p class="copyright">Copyright &copy; CHOI GOEUN, LTD. All rights reserved. @ 2019</p>
+        </footer>
+    </div>
+<!--    헤더끝-->
+</body>
+</html>

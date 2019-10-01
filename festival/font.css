@@ -1,0 +1,12 @@
+@charset "utf-8";
+@font-face{
+    font-family:"pro"; src:url("./font/BMHANNAPro.eot") format("eot"),url("./font/BMHANNAPro.ttf") format("ttf"), url("./font/BMHANNAPro.woff")
+    format("woff")}
+    font-weight:400;
+    font-style:normal
+
+@font-face{font-family:"bhs"; src:url("./font/BlackHanSans-Regular.eot") format("eot"),
+    url("./font/BlackHanSans-Regular.ttf") format("ttf"),url("./font/BlackHanSans-Regular.woff") famat("woff")}
+    font-weight:400;
+    font-style:normal
+    

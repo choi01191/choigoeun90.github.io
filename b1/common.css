@@ -1,0 +1,36 @@
+        @charset "utf-8";
+        /*초기화 :common.css*/
+        * {margin: 0;padding: 0;}
+        body, html{width: 100%;height: 100%;font-family: 'Do Hyeon', sans-serif;}
+        ul {list-style: none;}
+        a {text-decoration:none;}
+        button, a, input {border:0;outline:0;}
+        
+        /* 공통서식*/
+        .wrap{width: 100%;height: 100%;}
+        .page{clear: both; width: 100%;height: 100%; position: relative;}
+        .page_wrap{width: 1280px;margin: 0 auto;}
+        #tnb{width: 100%;height: 42px;background-color: rgba(0,0,0,0.4);position: absolute;top: 0;left: 0;z-index: 60;}
+        .right.menu{float: right;margin-right: 120px;}
+        #tnb li{float: left;margin-left: 25px;}
+        #tnb li a{display: block;color:#333;line-height: 42px;font-size: 14px}
+        #tnb li a:hover {#fe3c08;}
+        
+        .lst_btn{display: block; width: 48px;height: 48px; background-image:url("./img/menu_gray.png");
+        background-repeat: no-repeat;
+        position: fixed;top: 120px;left: 150px;z-index: 90;
+        text-indent:-9999px;cursor: pointer;}
+        
+        #gnb{position: fixed;top: 0;left: -250px; z-index: 99;width: 240px;height: 100%;
+            background-color: rgba(255,255,255,0.8);transition: 0.5s;border-right: 3px solid #ccc;}
+        #gnb{text-align: center;}
+        #ck1:checked ~ #gnb{left: 0;}
+        #ck1{display: none;}
+        .close_btn{display: block;width:36px;height: 33px;background-image: url(img/close1.png);  margin-right: 15px; float: right;cursor: pointer;background-repeat: no-repeat}
+        .main{clear:both;margin-top: 80px}
+        .main li{line-height: 68px}
+        .main li a{display: block;color: black;font-size: 28px}
+        .bottom{margin-top: 120px;}
+        .bottom li{line-height: 32px;}
+        .bottom li a{display:block;color: #fe3c08;text-indent: 20px;}
+        

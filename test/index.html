@@ -1,163 +1,86 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>메인 레이아웃</title>
-    <meta name="keywords"content="관련 검색어를 단어를 분리하고,단어마다 ','로 구분하여 입력
-      하며, 자세하게 기술하도록 한다.">
-    <meta name="description"content="해당 사이트의 자세한 설명을 검색어와 함께 입력하여 기술하도록 한다.">
-      <meta name="title"content="기관이나 사이트 명을 입력한다.">
-        <link rel="stylesheet" href="common.css">
-        <link rel="stylesheet" href="main.css">
-               
-    <style>
-        table{display: :table;}/*css속성:property*/
-        th,td{display: table-cell;}
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NAVIGATOR객체</title>
 </head>
 <body>
     <div class="wrap">
-        <header class="hd">
-<!--        헤더시작-->
-           <a href="index.html" class="logo"><img src="https://placehold.it/120x50/333" alt="로고"></a>
-           <nav id="tnb">
-               <ul class="menu">
-                   <li><a href="login.html">로그인</a></li>
-                   <li><a href="join.html">회원가입</a></li>
-                   <li><a href="mail.html">contact us</a></li>
-               </ul>
-           </nav>
-           <nav id="gnb">
-               <ul class="menu">
-                   <li><a href="sub1.html">회사소개</a></li>
-                   <li><a href="sub2.html">제품소개</a></li>
-                   <li><a href="sub3.html">서비스</a></li>
-                   <li><a href="sub4.html">고객센터</a></li>
-                   <li><a href="sub5.html">자료실</a></li>
-               </ul>
-           </nav>  
-        </header>              
-        <main class="contents">
-        <figure class="vs"><img src="https://placehold.it/1200x400/333" alt="배너" class="pic">
-        </figure>
-        <div class="page" id="page1">
-            <h2 class="page_tit">포토 갤러리</h2>
-            <ul class="lst">
-                <li class="item1"><a href="">
-                        <img src="https://placehold.it/330x200" alt="" class="thumb">
-                        <h3 class="lit_tit">목록제목1</h3>
-                        <p class="lst_com">목록내용1</p>
-                    </a></li>
-                <li class="item2"><a href="">
-                        <img src="https://placehold.it/330x200" alt="" class="thumb">
-                        <h3 class="lit_tit">목록제목2</h3>
-                        <p class="lst_com">목록내용2</p>
-                    </a></li>
-                <li class="item3"><a href="">
-                        <img src="https://placehold.it/330x200" alt="" class="thumb">
-                        <h3 class="lit_tit">목록제목3</h3>
-                        <p class="lst_com">목록내용3</p>
-                    </a></li>
-            </ul>
-        </div>
-        <div class="page" id="page2">
-            <h2 class="page_tit">공지사항</h2>
-               <table id="notice">
-                <thead>
-                    <tr>
-                        <th class="n_num">번호</th>
-                        <th class="n_title">제목</th>
-                        <th class="n_date">등록일</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="n_num">5</td>
-                        <td class="n_title">
-                           <a href="">공지사항 제목 클릭시 이동5</a></td>
-                            
-                        <td class="n_date">2019-09-10</td>
-                    </tr>
-                    <tr>
-                        <td class="n_num">4</td>
-                        <td class="n_title">
-                            <a href="sub4.html">공지사항 제목 클릭시 이동4</a></td>
-                        <td class="n_date">2019-09-09</td>
-                    </tr>
-                    <tr>
-                        <td class="n_num">3</td>
-                        <td class="n_title">
-                            <a href="">공지사항 제목 클릭시 이동3</a></td>
-                        <td class="n_date">2019-09-08</td>
-                    </tr>
-                    <tr>
-                        <td class="n_num">2</td>
-                        <td class="n_title">
-                            <a href="">공지사항 제목 클릭시 이동2</a></td>
-                        <td class="n_date">2019-09-07</td>
-                    </tr>
-                </tbody>
-            </table>
-               </div> 
-                <div class="page" id="page3">
-            <h2 class="page_tit">사이트맵</h2> 
-                <div class="sitemap">
-                    <ul class="site">
-                        <li class="cate1">
-                            <dl>
-                                <dt>회사소개</dt>
-                                <dd><a href="sub1.html#page1">회사연혁</a></dd>
-                                <dd><a href="sbu1.html#page2">경영이념</a></dd>
-                                <dd><a href="sbu1.html#page3">인사말</a></dd>
-                                <dd><a href="sbu1.html#page4">오시는길</a></dd>
-                            </dl>
-                        </li>
-                        <li class="cate2">
-                            <dl>
-                                <dt>제품소개</dt>
-                                <dd><a href="sub2.html#page1">화장품</a></dd>
-                                <dd><a href="sub2.html#page2">옷</a></dd>
-                                <dd><a href="sub2.html#page3">신발</a></dd>
-                                <dd><a href="sub2.html#page4">악세사리</a></dd>
-                            </dl>
-                        </li>
-                        <li class="cate3">
-                            <dl>
-                                <dt>서비스</dt>
-                                <dd><a href="sub3.html#page1">고객서비스</a></dd>
-                                <dd><a href="sub3.html#page2">협력사서비스</a></dd>
-                                <dd><a href="sub3.html#page3">as서비스</a></dd>
-                                <dd><a href="sub3.html#page4">정보서비스</a></dd>
-                            </dl>
-                        </li>
-                        <li class="cate4">
-                            <dl>
-                                <dt>고객센터</dt>
-                                <dd><a href="sub4.html#page1">배송</a></dd>
-                                <dd><a href="sub4.html#page2">마이페이지</a></dd>
-                                <dd><a href="sub4.html#page3">비밀번호</a></dd>
-                                
-                            </dl>
-                        </li>
-                        <li class="cate5">
-                            <dl>
-                                <dt>자료실</dt>
-                                <dd><a href="sub5.html#page1">공지사항</a></dd>
-                                <dd><a href="sub5.html#page2">다운로드</a></dd>
-                            </dl>
-                        </li>
-                        
-                    </ul>
-                </div>
-            
-        </div>
 
-        </main>
-        <footer class="ft">
-            <p class="addr">대전시 유성구 지족동로 124, 107동 701호</p>
-            <p class="copyright">Copyright &copy; CHOI GOEUN, LTD. All rights reserved. @ 2019</p>
-        </footer>
+        <h2 class="page_tit">navigator객체</h2>
+        <div id="txt"></div>
     </div>
-<!--    헤더끝-->
+<script>
+for(var key in navigator){
+    document.write("<br>"+key+":"+navigator[key]);
+
+}
+var data = document.getElementById("txt");
+var txt = "<br>현재 사용중인 브라우저이름:"+navigator.appName+"<br>";
+txt+= "해당 브라우즈 코드명:"+navigator.appCodeName+"<br>";
+txt+="현재 사용중인 브라우저의 버번 정보"+navigator.appVersion+"<br>";
+txt+= "userAgent프로퍼티로 알수있는 추가 정보"+navigator.userAgent+"<br>";
+txt+="현재 브라우저가 실행되고있는 운영체제" +navigator.platform+"<br>";
+txt+="현재 브라우저의 기본 언어 설정"+navigator.language+"<br>";
+txt+="브라우저 재작사"+navigator.vendor+"<br>";
+txt+="현재기기의 최대 터치점:"+navigator.maxTouchPoints+"<br>";
+txt+="현재 브라우저 앤진:"+navigator.product+"<br>";
+if(navigator.javaEnabled()){
+    txt+="현재 브라우저는 자바 애플릿을 실행할수있습닌다.<br>";
+
+} else {
+    txt+="현재 브라우저는 자바 애플릿을 실행할수 없습니다.<br>";
+}
+if( navigator.cookieEnabled){
+    txt+="현재 브라우저는 쿠키를 사용할수있습니다.<br>";
+
+}else{
+    txt+="현재 브라우저는 쿠키를 사용할수없습니다.<br>";
+}
+var agent = navigator.userAgent.toLowerCase();
+var browser = "정식브라우저가 아님";
+if(agent.indexOf("opera")!=-1) {browser ="오페라"
+} else if (agent.indexOf("chrome")!=-1){
+    browser="크롬";
+} else if(agent.indexOf("sapari")!=-1){
+    browser="사파리";
+} else if (agent.indexOf("firefox")!=-1){
+    browser="파이어폭스";
+} else if (navigator.appName=="Netscape" && navigator.userAgent.search("Trident")!=-1 || agent.indexOf("msie")!=-1){
+    browser="인터넷익스플로어";
+}
+var pc ="win36|win64|win32|mac|macintel";
+var dev1, dev2;
+if(navigator.platform){
+    if(pc.indexOf(navigator.platform.toLowerCase())<0){
+        dev1="모바일";}
+        else{
+
+    dev1="데스크탑";
+}
+}
+
+var mobile = new Array('iPhone', 'iPod', 'BlackBerry','android','Windows CE', 'Windows SE','LG','MOT','SAMSUMG','SonyErisson','Mobile','symbian','Opera Mobi','Opera Mini','IEmobile');
+for(var key in mobile){
+    if(navigator.userAgent.match(mobile[key]!=null)){
+        dev2="모바일";
+    }else{
+        dev2="데스크탑";
+    }
+}
+txt+="<br>현재 브라우저 종류:"+browser;
+txt+="<br>pc기분으로 현재 디바이스 알아보기:"+dev1;
+txt+="<br>mobile기준으로 현재 디바이스 알아보기:"+dev2;
+data.innerHTML=txt;
+data.innerHTML=dev1;
+data.innerHTML=dev2;
+
+
+
+
+</script>
 </body>
+
 </html>

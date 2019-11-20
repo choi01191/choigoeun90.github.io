@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이비가</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        body, html{width: 100vw;;height: 100vh;}
+        img, input, label{outline: 0; border: 0; box-sizing: border-box}
+        video{max-width: 70vw}
+        a{text-align: center;text-decoration: none;color: black}
+      
+        header{height: 100px}
+        .hd{max-width: 1200px;height: 100px;position: relative;margin: 0 auto;}
+        #gnb a{display: block;text-align: center;}
+        #gnb li{float: left}
+        .menu_box{width: 700px;height: 50px;float: right;position: absolute;right:0px;top:30px}
+        .menu_box li{width: 100px;}
+        .sub{width: 100px;height: 85px;background-color: rgba(1,1,1,0.5);opacity: 0;position: absolute;top:100px;top:50px;display: none;}
+        .sub a {display: block;padding: 10px ;color:white;}
+        .menu_box li:hover .sub{display: block;opacity: 1;transition: 0.5s;}
+        figure{background-color:}
+        .vs img{display: block;width:100vw}
+        .tit{text-align: center;margin-top:50px;}
+        .txt{position:absolute;top:200px;color: white;padding: 20px;}
+        .title{text-align: center;margin-top:50px;}
+        video{display:block;margin: 0 auto;}
+        footer{background-color: rgba(1,1,1,0.5);clear: both;width: 100vw;height: 100px;}
+        .copy{width: 1000px; line-height: 50px;}
+        content li {float: left; }
+        .con_box{width: 80%;}
+        content li img {float: left;max-width: 70vw }
+        
+        content{background-color: rgba(1,1,1,0.5);}
+
+        
+</style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+          <div class="hd">
+           
+            <a href="./index.html"><img src="./logo.jpg" alt=""></a>
+         <nav id="gnb">
+             <ul class="menu_box">
+                 <li><a href="">이비가짬뽕</a></li>
+                 <li><a href="">메뉴</a></li>
+                 <li>
+                     <a href="">성공사업
+                    </a>
+                     <ul class="sub">
+                         <li class="sub_lst">
+                                <a href="">성공사업</a>
+                        </li>
+                        <li class="sub_lst">
+                            <a href="">창업소개</a>
+                        </li>
+                     </ul>
+                 </li>
+                 <li>
+                     <a href="">매장소개</a>
+                    </li>
+                 <li>
+                     <a href="">이비자채널</a>
+                     <ul class="sub">
+                           <li class="sub_lst"><a href="">경영이념</a></li>
+                            <li class="sub_lst"><a href="">BI인테리어</a></li>
+                         </ul>     
+                </li>
+             </ul>
+         </nav>
+         </div>
+        </header>
+        <div class="page1">
+            <div class="vs">
+               <h2 class="txt">입이 즐거워 자꾸만 입이가는<br> 대한민국 대표 짬뽕</h2>
+                <img src="./bg_1.png" alt="">
+            </div>
+        </div>
+        <div class="page2">
+            <figure id="vd">
+             <h1 class="tit">이비가 TV</h1>
+            <video src="./videoplayback.mp4" id="vd1" autoplay loop controls></video>
+            
+            </figure>
+        </div>
+        <div class="page3">
+            <h1 class="title">이비가 STORY</h1>
+               
+               <content>
+                <ul class="con_box">
+                    <li class="con_li"><img src="con_li1.png" alt=""></li>
+                    <li class="con_li"><img src="con_li2.png" alt=""></li>
+                    <li class="con_li"><img src="con_li3.png" alt=""></li>
+                </ul>
+            </content>
+        </div>
+        
+        
+        
+        
+        <footer>
+        
+         <p class="copy">(주)이비가푸드 대전광역시 서구 계룡로 199 이비가빌딩 3층 대표자명 : 김영철 사업자등록번호:314-86-23662
+             <br>copyright@choigoeun</p>
+         <div class="sns_box">
+            <a href="./icon-instar2.jpg"></a>
+
+
+         </div>
+        </footer>
+    </div>
+</body>
+</html>

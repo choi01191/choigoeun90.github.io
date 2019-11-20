@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, intial-scle=1.0, user-scalable=no">
+    <meta name="authoer" content="choigoeun">
+    <meta name="keywords" content="검색">
+    <meta name="description" content="설명">
+    <script>
+        //문자열을 해석(parse)해서 정수(integer)를 리턴,,,parseInt(string, radix)
+    $(document).ready(function(){
+       $("#gnb .menu_box li a").click(function(){
+           var tar =parseIn($(this).attr("data-index"));//바디에서 설정한 정수값을 tar
+           var ofs=$("#page")
+           
+           
+           //input check될때 아니다.
+       }) ;
+    });
+    </script>
+    
+    
+    <style>
+        *{padding: 0;margin: 0;}
+        ul{list-style: none}
+        a{text-decoration: none}
+        botton, label,input,a{user-select: none} 
+        #hd{height: 80px;width: 100vw;position: fixed;background-color: rgb(0, 32, 62,0.8)}
+       
+        
+        .logo{float:right;margin-top: 25px;margin-right:15px}
+        .line_box{margin-top: 10px; display: block;position: relative;width: 60px;height: 60px;}
+        
+        #line{display: block;position: absolute;width: 30px;height: 4px;background-color: white;right:15px;transition: 0.5s;z-index: 999}
+        .line1{top:17px}
+        .line2{top:27px}
+        .line3{top:37px}
+        #ck1:checked ~header label .line_box .line1{top:27px;transform: rotate(45deg)}
+        #ck1:checked ~header label .line_box .line2{opacity: 0}
+        #ck1:checked ~header label .line_box .line3{top:27px;transform: rotate(-45deg)}
+        #ck1:checked ~ #gnb{right: 0;opacity: 1}
+        .vs1{display: block;background-image:url(bg1.jpg);background-repeat: no-repeat;background-size: cover;background-position:center center;width: 100vw;height: 100vh;}
+        #gnb{min-width:250px;min-height: 100vh;position: absolute;z-index: 900; background-color:rgb(0, 32, 62,0.8);right: -900px;opacity: 0;transition: 0.5s; }
+        .o_lst1{display: block;background-image: url(./icon/south-korea.png);width: 30px;height: 30px;}
+        .o_lst2{display: block;background-image: url(./icon/search.png);width: 30px;height: 30px;}
+        .o_lst3{display: block;background-image: url(./icon/user.png);background-repeat: no-repeat; width: 30px;height: 30px;}
+        .c_box{ display: none;}
+        .other_menu li{float: right}
+        #gnb a {color:white;clear: both}
+        .other_menu{min-width: 250px;height: 80px;line-height: 80px;margin-top: 20px;}
+        .other_menu li {margin-right: 20px }
+        .menu_box{line-height: 40px;}
+        .menu_box a{display: block;font-weight: bold;font-size: 22px;text-align: center;line-height:100px;}
+        #keyword, #login{width: 100vw;height: 100vh;background-color:rgb(0, 32, 62,0.8);top:-100vh;left:0;position: fixed}
+        #ck2:checked~ #keyword{top:0}
+        #ck3:checked~ #login{top:0}
+        
+        
+        
+        
+        
+    
+    </style>
+</head>
+
+<body>
+<input type="checkbox" id=ck1 class="c_box"> 
+<input type="checkbox" id=ck2 class="c_box"> 
+<input type="checkbox" id=ck3 class="c_box"> 
+<header id=hd>
+    
+    <a href="" class="logo"><img src="main_logo.png" alt=""></a>
+    <label for="ck1" class="lst_btn">
+        <span  class="line_box">
+           <span id=line class="line1"></span>
+            <span id=line class="line2"></span>
+            <span id=line class="line3"></span>
+        </span>
+    </label>
+</header>
+<nav id="gnb">
+   <ul class="other_menu">
+       <li class="o_lst"><a href="" class="o_lst1"></a></li>
+       <li class="o_lst"><label class="o_lst2" for="ck2"></label></li>
+       <li class="o_lst"><label class="o_lst3" for="ck3"></label></li>
+   </ul>
+    <ul class="menu_box">
+        <li><a href="javascript:;" data-index="1">ABOUT</a></li><!--자바 스크립으로 막고 index로 변환시켜서 인덱스 숫자를 누르면 그쪽페이지로 옴길수있게함-->
+        <li><a href="javascript:;" deta-index="2">SERVICE</a></li>
+        <li><a href="javascript:;" data-index="3">NEWS</a></li>
+        <li><a href="javascript:;" data-index="4">CONTACT</a></li>
+    </ul>
+</nav>
+   <div id="keyword">
+    <form action=""></form>
+   </div>
+   <div id="login">
+       
+       
+   </div>
+    <figure>
+        <ul class="vs_box">
+            <li><a href="" class="vs1"></a></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+        
+    </figure>
+<ul class="page_box">
+   <li id="page1"></li>
+   <li id="page2"></li>
+   <li id="page3"></li>
+   <li id="page4"></li>
+</ul>    
+</body>
+</html>

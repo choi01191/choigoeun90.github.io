@@ -21,35 +21,40 @@
     <link rel="shorcut icon" type="image/png" sizes="180x180" href="./img/log2.png">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./common.css">
+
     
         <style>
          /*메인 페이지 콘센트 스타일*/
+            
+            h2{color:black;font-size: 20px}
+            h3{font-size: 20px;color:black}
+            h4{font-size: 18px}
         #vdo{width:100%; height: 100%;}
         #vd1{display: block;width: 100%;min-height: 100%;}
         #cover_page{position: absolute;width: 100%;height: 100%; z-index: 10; top: 0;left: 0; font-size: 42px;}
         .tit{color: gray; text-align:center;margin: 90px auto;margin-top:200px;}
-        .frm1{width: 1000px;height: 80px;margin:0 auto; background-color:rgba(0,0,0,0.6;)}
-        #keyword{display: block;height:50px;width:600px;font-size:18px;text-indent: 14px;margin-left: 600px ;margin-top:50px ;margin:5;float:left;opacity: 0.6;transition: 0.5s;}
-        #search{display: block;width: 50px;height: 50px;float: right;
-            margin-top: 50px;margin-right: 650px;
-            background-color: #777;
+        #frm1{max-width: 1000px;height: 80px;margin-bottom: 300px ;background-color:rgba(0,0,0,0.6;);margin: 0 auto;
+    clear: both;padding-top: 700px;margin-left: 660px}
+        #keyword{display: block;height:50px;width: 580px;font-size:18px;text-indent: 14px ;margin:5;float:left;opacity: 0.6;transition: 0.5s;}
+        #search{display: block;width: 50px;height: 50px;
+            background-color:white;
             background-image: url(img/search.png);
             text-indent: -99999px;
             background-size: 44px 49px;
             background-position: center center;
-        background-repeat: no-repeat;
-        opacity: 0.5;    transition: 0.5s;}
+        background-repeat: no-repeat;box-sizing: border-box
+        opacity: 0.8;  transition: 0.5s;}
         /*keyword focus*/
         #keyword:focus{opacity:1; width: 500px;height: 50px;border: 1px}
         #keyword:focus ~ #search{opacity: 1;}
         /*page2*/
-        #page2, #page3{background-image:url(img/nhouse1.png);background-repeat: no-repeat;background-size: cover;}
-        #page2{background-attachment:fixed;padding-top: 40px}
-        #jeanju{background-color:lightgray; height: 95%;overflow: hidden;opacity: 0.75;}
-        .page_tit{text-align: center;line-height: 100px;font-size: 48px;}
-        .thum_lst li{float: left;width: 373px;margin-left: 40px;position: relative;overflow:hidden;height: 320px;margin-top: 40px;}
-        .thum_lst li.col8{width: 786px;} 
-        .thum_lst li a{color: gray;display: block;width: 360px;height: 300px;overflow: hidden;border: 3px solid transparent;margin: 7px auto;transition:0.6s;transition-delay: 0.1s;background-color:white;}
+        #page2, #page3{background-image:url(img/nhouse1.png);background-repeat: no-repeat;background-size: cover;background-attachment:fixed;position: relative}
+        #page2{background-attachment:fixed;padding-top: 100px}
+        #jeanju{background-color:white; height: 90%;overflow: hidden;}
+        .page_tit{text-align: center;line-height: 100px;font-size: 48px;padding-top: 20px}
+        .thum_lst li{float: left;width: 373px;margin-left: 40px;position: relative;overflow:hidden;height: 320px;margin-top: 10px;}
+        .thum_lst li.col8{width: 780px;} 
+        .thum_lst li a{;display: block;width: 360px;height: 300px;overflow: hidden;border: 3px solid transparent;margin: 7px auto;transition:0.6s;transition-delay: 0.1s;background-color:lightgray;color:black}
         .thum_lst li a:after {content:"▶"; position: absolute;bottom: 27px;right: 24px;display: none;}
         .thum_lst li a:hover{border: 3px solid #fe3c08;background-color: #fff;}
         .thum_lst li
@@ -57,12 +62,12 @@
         .cate_tit{padding: 14px;color: #fe3c08;text-decoration: underline;}
         .lst_tit{padding: 14px;}
         .list_com{padding: 14px;}
-        .thum_lst li.col8 a {width: 770px;color: #fff;background-image: url(img/log2.png);background-size: cover;}   
+        .thum_lst li.col8 a {width: 770px;color: #fff;background-image: url(img/012.jpg);background-size: cover;background-repeat: no-repeat;background-position: center center;box-sizing: border-box;border: 2px solid white}   
         
         
         /*page3 스타일_사진뺴고 투명도 적용법물어보기*/
         #vs_con{padding-top:50px;}
-        #vs {width: 100%;overflow-x:hidden;background-color: #fff;padding-top: 50px;position: relative;opacity: 0.75;}
+        #vs {overflow: hidden;width: 100%;background-color: #fff;padding-top: 50px;position: relative;margin-top: 100px;}
         .img_box{width: 400%;}
         .img_box li{float: left; width: 25%;}
         .img_box li .pic {display: block;width: 580px;float: left;margin-left: 40px;margin-bottom: 40px;}
@@ -73,26 +78,32 @@
         /*button_x3*/
         .btn_box{position: absolute;right: 100px;bottom: 50px;z-index: 50;width: 500px;height: 14px;} 
         .btn_box li{width: 150px;margin-left: 12px;float: left;}
-        .btn_box li button{display: block;width: 150px;height: 14px;background-color: #666;}
-        .btn_box li.on button{background-color: #fe3c08;}
+        .btn_box li label{display: block;width: 150px;height: 14px;background-color: #666;}
+
+            #btn1:checked ~.img_box{margin-left: 0}
+            #btn2:checked ~.img_box{margin-left: -100%}
+            #btn3:checked ~.img_box{margin-left: -200%}
+            #btn1:checked ~ul li .la1{background-color: #fe3c08;}
+            #btn2:checked ~ul li .la2{background-color: #fe3c08;}
+            #btn3:checked ~ul li .la3{background-color: #fe3c08;}
+            input{display: none;}
         
-        .ico_ink {clear: both;margin-top: 50px;width: 100%;;height: 64px;background: #fff;}
+        .ico_link {clear: both;margin-top: 50px;width: 100%;height: 64px;background: #fff;}
         .ico_link li{float: left;width: 50%;height: 64px;}
-        .ico_link li a{display: block;color: #333;font-size: 22px;line-height: 64px; text-align: center;background: #fff;padding-left: 100px;}
+        .ico_link li a{display: block;color: #333;font-size: 22px;line-height: 64px; text-align: center;padding-left: 150px;width: 100px;margin: 0 auto;}
+            .item1{ background-image: url(./img/sc3.png);width: 50px;height: 50px;display: block;background-repeat: no-repeat;background-position: center center; background-size: contain}
+            .item1{background-image:url(./img/sc3.png);width: 50px;height: 50px;display: block;background-repeat: no-repeat;background-position: center center; background-size: contain}
         .ico_link li a.item2 {background: #f0f0f0;}
-        .ico_link li a span{display: block;float: left; padding-left: 15px;}
-        .ico_link li a .ico{background-repeat: no-repeat;background-image: url(./img/search.png);margin-top: 5px;}
-        .ico_link li a.item1 .ico {background-position: 0px -301px;width: 20px;height: 53px;}
-        .ico_link li a.item2 .ico {background-position: -40px -301px;width: 42px;height: 53px;}
+            .ico_link li a span{display: block;float: left;}
         
         /*footer style*/
-        #ft{height: 100px;background: #333;position: relative;clear: both}
+        #ft{width: 100%;height: 100px;background:rgb(0,0,0,0.4);position: absolute;clear: both;bottom: 0 ;overflow: hidden}
         .fnb{float: left;margin-left: 20px;}
-        .fnb li{float: padding: 10px;}
+        .fnb li{float:left;padding: 10px;}
         .fnb li a{color:#fff;display: block;line-height: 78px;}
-        .fnb li a:after{content: "."; padding-left: 20px;}
-        .fnb li a.lst after{column-count: "";}
-        .copyright{float: right;line-height: 100px;padding-right: 24px;}
+        .fnb li:first-child a:after{content: "|"; padding-left: 20px;}
+        .fnb li a:after{column-count: "";}
+        .copyright{float: right;line-height: 100px;padding-right: 24px;color: white}
         
         #totop{ position: fixed;right: 60px;bottom: 100px;z-index: 999; display: block;width: 40px;height: 40px;text-align: center;opacity: 0.6;
          line-height: 40px;background-color:black;color: #fe3c08; border-radius: 32px;box-shadow: 0px 0px 20px #fff;}
@@ -133,10 +144,10 @@
         <!--페이지1-동영상 -->
         <div class="page" id="page1">
             <figure id="vdo">
-                <video src="./video2.mp4" id="vd1" autoplay loop></video>
+                <video src="./img/video7.mp4" id="vd1" autoplay loop></video>
             </figure>
             <section class="page_wrap" id="cover_page">
-                <h2 class="tit">전주문화 관광</h2>
+<!--                <h2 class="tit">전주문화 관광</h2>-->
                 <form action="" id="frm1">
                     <input type="text" id="keyword" placeholder="검색어를 입력하세요">
                     <input type="submit" id="search">
@@ -148,30 +159,34 @@
         <section class="page_wrap" id="jeanju">
             <h2 class="page_tit">전주</h2>
             <ul class="thum_lst">
-                <li class="col4"><a href="">
+                <li class="col4 one">
+                   <a href="">
                     <h4 class="cate_tit">전주이야기</h4>
-                    <h3 class="lst_tit">전주</h3>
-                    <p class="lst_com">전주</p>
+                    <h3 class="lst_tit">천년 역사를 담은땅! 전주</h3>
+                    <p class="lst_com">유네스코가 세계문화유산으로 지정한 판소리 본고장 전주,
+한옥·한식·한지 등 한국적인 전통문화와 풍요, 여유로움을 꽃피우고,멋과 맛을 담고 있는 도시이다</p>
                 </a></li>
-                <li class="col"><a href="">
+                <li class="col4 two"><a href="">
                     <h4 class="cate_tit">관광명소</h4>
-                    <h3 class="lst_tit">관광</h3>
-                    <p class="lst_com">관광</p>
+                    <h3 class="lst_tit">한옥마을</h3>
+                    <p class="lst_com">2017년 기준 연 1,100만명의 관광객이 다녀가는 전주한옥마을은 일제강점기 일본인들의 세력 확장에 대한 반발로 한국인들이 교동과 풍남동 일대에 근대식 한옥들을 짓기 시작하면서 발전했다.</p>
                 </a></li>
-                <li class="col4"><a href="">
+                <li class="col4 three"><a href="">
                     <h4 class="cate_tit">음식</h4>
-                    <h3 class="lst_tit">막걸리</h3>
-                    <p class="lst_com">비빔밥</p>
+                    <h3 class="lst_tit">비빔밥</h3>
+                    <p class="lst_com">조선 3대 음식 중 으뜸으로 손꼽히고 있으며
+대한민국 대표음식으로 외국인들이 가장 선호하는 전주비빔밥은 한국음식 BEST 1이다.</p>
                 </a></li>
-                <li class="col4"><a href="">
+                <li class="col4 four"><a href="">
                     <h4 class="cate_tit">문화</h4>
-                    <h3 class="lst_tit">한지</h3>
-                    <p class="lst_com">한옥</p>
+                    <h3 class="lst_tit">전주시의 도시한옥군은 지구형상, 건물형태 및 구조, 골목길 등이 양호한 상태로 보전되어 있는 유일한 지역이다.</h3>
+                    <p class="lst_com">역사적인 관점에서 교동, 풍남동 일원의 도시한옥은 1910년대부터 산업화 사회로의 진행과정에서 발생된 우리나라 주거문화 발달과정의 중요한 자료이다.</p>
                 </a></li>
-                <li class="col8"><a href="">
-                    <h4 class="cate_tit">사진</h4>
-                    <h3 class="lst_tit">사진</h3>
-                    <p class="lst_com">사진</p>
+                <li class="col8 five"><a href="">
+                    <h4 class="cate_tit">"아는만큼 보이는 것이 여행이라했다"</h4>
+                    <h3 class="lst_tit">전주는 한국을 대표하는 전통문화 도시로, 한옥·한식·한지 등 韓스타일을 체험 할 수 있는 특별한 여행지이다.</h3>
+                    
+                    
                     </a></li>
             </ul>
         </section>
@@ -181,56 +196,72 @@
    <div class="page" id="page3">
        <section class="page_wrap" id="vs_con">
            <figure id="vs">
+               
+               <input type="radio" name="rdo" id="btn1"  checked>
+               <input type="radio" name="rdo" id="btn2">
+               <input type="radio" name="rdo" id="btn3">
                <ul class="img_box">
                 <li>
-                    <img src="./img/house1.jpg" alt="배너1" class="pic">
+                    <img src="./img/20170309094359307mguo.jpg" alt="배너1" class="pic">
                     <div class="tit_box">
-                        <h3 class="vs_tit">전주이미지</h3>
-                        <p class="vs_com">전주이미지 있다</p>
+                        <h3 class="vs_tit">첫째</h3>
+                        <p class="vs_com">전국 어디서나 빠르고, 편리하게 접근할 수 있다는 점이다. 서울에서 전주까지 고속버스로 2시간 30분이면 가능하고, 부산에서도 3시간 30분이면 전주에 올 수 있다. 또한 서해안 고속도로와 천안-논산간 고속도로, 대전-통영간 고속도로, 익산-장수간 고속도로의 개통으로 더 빠르고 더 편리하게 전주여행을 즐길 수 있으며, 서부권 관광의 중심지로 전주를 보다 넉넉히 즐길 수 있다.</p>
                         <a href="" class="more">view</a>
                     
-                   </div>
+                   </div>     
                 </li>
                 <li>
-                    <img src="./img/house2.jpg" alt="배너2" class="pic">
-                    <div class="tit box">
-                        <h3 class="vs_tit">전주이미지</h3>
-                        <p class="vs_com">전주이미지 있다</p>
+                    <img src="./img/button2.png" alt="배너2" class="pic">
+                    <div class="tit_box">
+                        <h3 class="vs_tit">둘째</h3>
+                        <p class="vs_com">전주 도심권에 후백제와 조선시대, 근대문화유적지가 다 모여 있다는 것이다.후백제 견훤대왕의 숨결이 담긴 견훤성터와 조선시대 태조 어진이 모셔진 경기전과 임진왜란때 조선의 역사를 지켜온 전주사고를 비롯해 오목대, 풍남문, 전주향교, 객사, 한벽당, 학인당 등이 전주한옥마을을 중심으로 걸어서 여행할 수 있기 때문이다.</p>
                         <a href="" class="more">view</a>
                     </div>
                 </li>
                 <li>
-                   <img src="./img/nhouse1.jpg" alt="배너3" class="pic">
-                   <div class="tit box">
-                        <h3 class="vs_tit">전주이미지</h3>
-                        <p class="vs_com">전주이미지 있다</p>
+                   <img src="./img/button3.png" alt="배너3" class="pic">
+                   <div class="tit_box">
+                        <h3 class="vs_tit">셋째</h3>
+                        <p class="vs_com">전주한옥마을에서는 다양한 전통문화체험을 즐길 수 있다. 오첩반상의 아침식사와 함께 한옥을 체험할 수 있는 한옥숙박체험시설과 한지공예·전통혼례·풍물·소리·한방 등 다양한 체험을 할 수 있는 곳이 있다
+                        </p>
                         <a href="" class="more">view</a>
                     </div>
                 </li>
                </ul>
                 <ul class="btn_box">
                     <li class="on">
-                   <button></button></li>
-                   <li><button></button></li>
-                   <li><button></button></li>
+                       <label class="la1" for="btn1"></label></li>
+                   <li><label class="la2" for="btn2"></label></li>
+                   <li><label class="la3" for="btn3"></label></li>
                 </ul> 
             </figure>
                     <ul class="ico_link">
-                    <li><a href="" class="item1"><span class="ico"></span>
-                        <span>사무소위치</span></a>
+                    <li>
+                       <a href="" class="item1">
+                       <span class="ico">
+                        사무소위치
+                    </span>
+                        </a>
                     </li> 
-                    <li><a href=""class="item2"><span class="ico">연락처
+                    <li>
+                       <a href=""class="item2">
+                       <span class="ico">연락처
                         </span>                       
                         </a>
                     </li>
                 </ul>
+                
        <!--footer-->
        
         </section>
+          
       <footer id="ft">
               <ul class="fnb">
                   <li>
-                     <a href="index.html" calss="last">home</a>
+                     <a href="index.html" class="last">웹접근성</a>
+                  </li>
+                   <li>
+                     <a href="index.html" class="last">개인정보처리방침</a>
                   </li>
                 </ul>
                   <p class="copyright">54994) 전라북도 전주시 완산구 노송광장로 10 대표전화:063)222-1000 팩스:063)281-5000
@@ -240,7 +271,7 @@ COPYRIGHT © 2015 JEONJU CITY. ALL RIGHTS RESERVED.
                   </p>
           </footer>
          
-    </div>
+  </div>
     </div>
     <a href="#" id="totop">❤</a>
 </body>

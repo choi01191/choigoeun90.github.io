@@ -16,17 +16,17 @@
         #tnb li a{display: block;color:#333;line-height: 42px;font-size: 14px}
         #tnb li a:hover {#fe3c08;}
         
-        .lst_btn{display: block; width: 48px;height: 48px; background-image:url("./img/menu_gray.png");
+        .lst_btn{display: block; width: 48px;height: 48px; background-image:url("./img/menu.png");
         background-repeat: no-repeat;
         position: fixed;top: 120px;left: 150px;z-index: 90;
         text-indent:-9999px;cursor: pointer;}
         
         #gnb{position: fixed;top: 0;left: -250px; z-index: 99;width: 240px;height: 100%;
-            background-color: rgba(255,255,255,0.8);transition: 0.5s;border-right: 3px solid #ccc;}
+            background-color:rgba(255,255,255,0.8);transition: 0.5s;}
         #gnb{text-align: center;}
         #ck1:checked ~ #gnb{left: 0;}
         #ck1{display: none;}
-        .close_btn{display: block;width:36px;height: 33px;background-image: url(img/close1.png);  margin-right: 15px; float: right;cursor: pointer;background-repeat: no-repeat}
+        .close_btn{display: block;width:28px;height: 28px;background-image: url(img/close.png);  margin-right: 10px; float: right;cursor: pointer;background-repeat: no-repeat;margin-top: 5px;background-size: contain}
         .main{clear:both;margin-top: 80px}
         .main li{line-height: 68px}
         .main li a{display: block;color: black;font-size: 28px}

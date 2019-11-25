@@ -11,47 +11,216 @@
     <meta poperty="og:description" content="대전와인페스티벌">
     <style>
         * {margin: 0;padding: 0;}
-        body,html{width: 100%;height: 100%;font-family: "pro", sans-serif;}
+        body,html{width: 100%;height: 100%;font-family: "pro", sans-serif;overflow-x: hidden}
         ul{list-style: none;}
-        a{text-decoration: none; color:#000;}
+        a{text-decoration: none; color:#fff;}
         button, a, input{border:0;outline: 0;}
-        .hd{width: 100%; height: 150px; background-image: url("img/hd_bgline.jpg");opacity: 0.9;}
-        .hd_wrap{clear: both; width: 1000px; margin: 0 auto;}
+
+        /*	background-color: #9a5b6c	header_1*/#983756
+        #hd{width: 100vw; height: 150px; ;opacity: 0.9;position: relative;}
+        .hd_wrap{ position: relative;width:100vw;  height: 50px;background-color:#1d1635}
+        .hd_wrap1{width: 1280px;margin: 0 auto;}
+        .hd_wrap2{  position: relative;width: 1280px; margin: 0 auto; height: 100px;}
         .notice_p{color: #fff;}
-        .s_logo{display: block;font-size: 40px; margin-top: 5px;float: left;}
-        .info_box{float: left;line-height: 50px;margin-left: 200px;color: #fff; background-position:0px center;}
-        .top_right a{color: #fff;}
-        .top_right{float: right;line-height: 50px;}
+        .s_logo{display: block;
+    margin-top: 5px;
+    float: left;}
+        .info_box{position: absolute; left: 50%;transform: translateX(-50%);display: block;width: 270px;line-height: 50px; color: #fff; background-position:0px center;}
+        .top_right li{color: #fff;float: left;width: 50px;height: 40px;}
+        .top_right a {color:#fff}
+        .top_right{width: 200px;float: right;line-height: 50px;height: 50px;}
+        .top_right li:first-child::after{    position: absolute;
+    color: beige;
+    content: "|";
+    display: block;
+    width: 10px;
+    height: 50px;
+    top: 0px;
+    right: 195px;
+}}
         
-        .b_logo {display: block; width: 150px;height: 100px;background-image: url(img/b_logo.png);float: left;background-repeat: no-repeat;background-position: center;}
+/*        header_2*/
+        .b_logo {display: block; width: 150px;height: 100px;background-image: url(img/b_logo.png);float:left;background-repeat: no-repeat;background-position: center; }
         
-        #main_menu {float: left; margin-left: 50px; margin-top: 27px;}
-        #main_menu li {float: left; width: 130px; position: relative;}
+        #main_menu { width: 600px;height: 100px;float:left; }
+        #main_menu > ul {margin-left: 100px; width: 600px; height: 100px;margin-top: 10px}
+        
+        #main_menu li { margin-top: 20px; float: left; width: 50px;margin-left:80px}
         #main_menu li .sub li{clear: both;}
-        .sub{overflow: hidden;width: 240px;height: 240px;position: absolute; height: 0px;top: 50px; transition: 0.5s; }
+        .sub {overflow: hidden;
+    background-color: rgba(225,225,225,0.6);
+    height: 200px;
+    margin-left: -80px;
+    height: 0px;
+    top: 100px;
+    transition: 0.3s;
+    width: 200px; }
+        .sub li{     padding: 0;
+    width: 100px;
+    clear: both;
+    /* text-align: center; */
+            margin: 0;}
+        .sub a {text-align: center;}
         #main_menu li a {display: block;color: #333;line-height: 50px;font-size:20px;text-align: center;}
         #main_menu li .a_0{display: block;font-size: 28px;}
-        #main_menu li:hover .a_0{color: #9a5b6c;border-bottom:3px solid #333}
-        #main_menu li:hover .sub{height: 200px;}
-        #main_menu :before{content:"";display: block;width: 100px;height:0px; overflow: hidden;position: absolute;top: 10px;left: 0px;border-bottom: 3px solid transparent;transition: 0.5s;}
+        #main_menu li:hover .a_0{color:#9a5b6c;border-bottom:3px solid #333}
+        #main_menu li:hover .sub{position: absolute;height: 200px;z-index: 30;}
         #main_menu:hover::before{height: 200px;border-bottom: 3px solid #333;}
+/*		img*/
+		
         
-        /*form 요소*/
-        .frm1{float: left;padding: 15;margin-top:50px;}
+          /*form 요소*/
+        #frm1{ width: 250px ;height: 50px;float:right;}
+        #frm1{ width: 250px ;height: 50px;float:right;}
         .search{display: block;float: left;width: 40px;height: 40px;border-radius: 21px;overflow: hidden;text-indent: -9999;background-image: url(icon/search2.png);background-position: center;background-repeat: no-repeat;margin-top:35px;}
-        #sel1{display: block;float: left;width: 140px;margin-left: 30px;margin-top: 40px;line-height: 100px;height: 32px;border-radius: 5px 0px 0px 5px;}
-        #go_btn{display: block; float: left;width: 32px;height: 32px;line-height: 35px;text-align: center;margin-top:40px;border-left: 1px;outline: 0;background-color: #eee;border-radius: 0px 5px 5px 0px;}
-        #search_form{position: absolute;left: 0;top: 151px;width: 100vw;height: 0px;background-color: #fff;transition:0.5s;overflow: hidden;border-bottom: 3px solid transparent;opacity: 0.5;outline: 0;z-index:1}
-        #ck1:checked + #search_form{height: 200px;border-bottom: 3px solid #333;}
-        .close_btn{display: block;width: 38px;height: 38px;cursor: pointer;background-image: url(icon/close_b1.png);background-repeat: no-repeat;background-position: center;text-indent: -9999px; position: absolute;right: 20%;top: 0px;}
-        #keyword{display: block;width: 600px;height: 60px;background-color: rgba(0,0,0,0.5); margin-top: 50px;margin-top: 50px;margin-left: 250px;float: left;border-radius: 0px,5px,5px,0px;opacity: 0.5;}
-        .search_btn{display: block;width: 60px;height: 60px;float: left;margin-top:50px;margin-left: 10px;background-image: url(icon/search2.png);background-position: center;background-repeat: no-repeat; text-indent: -9999px;}
+        .search{display: block;float: left;width: 40px;height: 40px;border-radius: 21px;overflow: hidden;text-indent: -9999;background-image: url(icon/search2.png);background-position: center;background-repeat: no-repeat;margin-top:35px;}
+        #sel1{display: block;float: left;width: 140px;margin-left: 30px;margin-top: 40px;line-height: 100px;height: 32px;border-radius: 5px 0px 0px 5px;background-color: rgba(225,225,225,0.5)}
+        #go_btn{display: block; float: left;width: 32px;height: 32px;line-height: 35px;text-align: center;margin-top:40px;border-left: 1px;outline: 0;background-color:#1d1635;border-radius: 0px 5px 5px 0px;color: white}
+        #search_form{position: absolute;left: 0;width: 1240px;height: 0px;background-color:rgba(255,255,255,0.6);transition:0.5s;overflow: hidden;border-bottom: 3px solid transparent;outline: 0;z-index:30}
+        #ck1{margin-right: 50px;}
+        #ck1{display: none;}
+        #ck1:checked + #search_form{height: 200px;margin-top: 100px; border-bottom: 3px solid #333;}
+        
+        .close_btn{display: block;width: 38px;height: 38px;cursor: pointer;background-image: url(icon/close_b1.png);background-repeat: no-repeat;background-size: 28px 28px; background-position: center;text-indent: -9999px; position: absolute;right: 0%; top:10px;}
+        #keyword{display: block;width: 600px;height: 60px;background-color: rgba(0,0,0,0.5); margin-top: 500px;margin-top: 70px;margin-left: 300px;float: left;border-radius: 0px,5px,5px,0px;opacity: 0.5;}
+        .search_btn{display: block;width: 60px;height: 60px;float: left;margin-top:70px;margin-left: 10px;background-image: url(icon/search2.png);background-position: center;background-repeat: no-repeat; text-indent: -9999px;cursor: pointer;}
+/*    main*/
+        #content{position: relative;width: 100vw;height: 100vh;}
+        .wave{ width: 100vw;
+    display: block;
+    background-image: url(./img/wave3.png);
+    position: absolute;
+    bottom:  0px;
+    height: 50px;
+        background-size: cover;}
+		
+		
+		#vs {width: 100vw;height: 720px; position: relative;overflow: hidden}
+        #vs input{display: none;}
+      
+        .img_box{width: 100vw;margin-top: 0}
+         .img_box li{ width: 100vw;height: 720px;}
+       
+        .ra{display: none;}
+        .la_box{position: absolute;width: 200px;height: 10px;z-index: 100;bottom: 150px;left: 45%}
+        
+        .la_box label{display: block
+            ; width: 20px;height: 20px; border-radius: 10px;background-color:rgba(154, 91, 108,0.7) ;float:left;margin: 10px;z-index: 100}
+/*   color        rebeccapurple*/
+        #ra1:checked~.la_box {background-color: navy}
+        #ra1:checked ~#vs .la_box .bel1 {background-color:#1d1635}
+        #ra2:checked ~#vs .la_box .bel2 {background-color:#1d1635}
+        #ra3:checked ~#vs .la_box .bel3 {background-color:#1d1635}
+        #ra4:checked ~#vs .la_box .bel4 {background-color:#1d1635}
+        #ra5:checked ~#vs .la_box .bel5 {background-color:rgb(154, 91, 108)}
+		#ra1:checked ~#vs .b_box .img_box {margin-top: 0;}
+		#ra2:checked ~#vs .b_box .img_box {margin-top: -720px;}
+        #ra3:checked ~#vs .b_box .img_box {margin-top: -1440px;}
+        #ra4:checked ~#vs .b_box .img_box {margin-top: -2160px;}
+        #ra5:checked ~#vs .b_box .img_box {margin-top: -2880px;}
+        
+/*      MIAN CENTER*/
+        
+        .tit_box{
+   height: 720px;
+    position: relative;
+    margin-right: 30px;
+    /* margin-left: 0; */
+    /* position: absolute; */
+    width: 1280px;
+}
+        .vs_box{
+    color: white;
+    top: 0;
+    z-index: 20;
+    height: 700px;
+    width: 1280px;
+    position: absolute;
+  transform: translateX(-50%);
+    left: 50%;}
+        .vs_tit{bottom: 30%;
+    right: 0;
+    font-size: 40px;
+    padding: 0px 0px;
+    line-height: 1.4;
+    
+    position: absolute;
+    z-index: 10;
+        text-shadow: 5px 5px 5px black
+        }
+        .vs_com{font-size: 28px}
+        .icon_box{    top: 20%;
+  
+    z-index: 20;
+    position: absolute;
+    width: 100px;
+    height: 450px;;}
+        .icon_fr{margin-bottom: 20px;
+    height: 100px;
+    background-color: rgba(225,225,225,0.6);
+    border-radius: 50px;
+    width: 100px;
+            text-align: center
+}
+        .icon_fr li p {margin-bottom: 0;text-align: center;}
+        .icon_fr a{display:inline-block;margin-top: 20px}
+        .r_con1{display: block;background-image: url(icon/front.png);background-position: 0px 0px;width: 40px;height: 40px;}
+        .r_con2{background-image: url(icon/front.png);background-position: -40px 0px;width: 40px;height: 40px;}
+        .r_con3{background-image: url(icon/front.png);background-position: -80px 0px;width: 40px;height: 40px;}
+        
+        
+/*        덥는컨텐츠박스*/
+        .l_box{height:400px;width: 100%;}
+        .col_box{position: absolute;z-index: 10px;top:620px;width: 1280px;
+    left: 50%;
+    transform: translateX(-50%);}
+        
+        
+        #col1, #col2, #col3{position: relative;width: 360px;height: 400px;background-color: rgba(152, 55, 86,0.5);float: left;border-radius: 20px}
+        #col1,#col2{margin-right: 50px}
+        #col1{margin-left: 45px}
+        .col_tit{color:white;text-align: center;font-size: 26px;}
+         .col_com{color:white;text-align: center;clear:both;font-size: 18px;}
+        .col_box .col_fr, .col_box li{height: 100px;text-align: center;}
+        .icon{
+    left: 30px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    /* left: 0; */
+    background-color: white;
+    border-radius: 7px;}
+        .cate_tit{display: block;}
+        .con_text{ color:white;width: 300px;position: absolute;right: 0}
+        .lst li{ width: 360px; margin: 0 auto;
+    height: 100px;
+    position: relative;}
+        .cate_com{display: block;clear: both}
+        
+        
+        
+        
+/*        footer*/
+        #ft {clear:both;background-color:#1d1635; color:white;width: 100vw;height: 100px;margin-top:450px;position: relative;margin-bottom: 0}
+        .ft_wrap{position: absolute;
+    width: 1280px;
+    height: 100px;
+    /* margin: 0 auto; */
+    left: 50%;
+    transform: translateX(-50%);}
+        #fnb  li{float: left;margin: 20px}
+        .copyright {clear: both;margin-top:20px;width: 1280px;}
+        .ft_mid{position: relative;width: 1280px;}
+            
+      
         
         
     </style>
     <link rel="stylesheet" href="font.css">
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148901329-1"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148901329-1"></script>
     <script>
   window.dataLayer = window.dataLayer || [];
@@ -66,19 +235,21 @@
 </head>
 <!--body start-->
 <body>
-    <header class="hd">
+    <header id="hd">
     <div class="hd_wrap">
+      <div class="hd_wrap1">
        <a href="https://www.daejeon.go.kr/" class="s_logo"><img src="./logo/logo_typeA.png" alt="deajeon"></a>
        <div class="info_box">
           <img src="./img/notice.png" alt="notice">
           <a class="notice_p">2019와인축제 기업참가희망서 받습니다</a>
        </div>
        <ul class="top_right">
-           <li><a href="index.html">HOME</a></li>
-           <li><a href=""></a></li>
-       </ul>        
+           <li><a href="index.html">login</a></li>
+           <li><a href="">sign up</a></li>
+       </ul>
     </div>
-    <div class="hd_wrap">
+    </div>
+    <div class="hd_wrap2">
         <a href="" class="b_logo"></a>
         <nav id="main_menu">
             <ul>
@@ -115,102 +286,130 @@
             </ul>
         </nav>
         <form action="" id="frm1">
-            <laber for="ck1" class="search"></laber>
+            <label for="ck1" class="search"></label>
             <select name="" id="sel1">
                 <option value="">ENGLISH</option>
                 <option value="">KOREAN</option>
             </select>
-            <button id="go_btn">go</button>
+            <button id="go_btn">GO</button>
             <input type="checkbox" id="ck1">
            <div id="search_form">
-               <lable for="ck1" class="close_btn">닫기</lable>
+               <label for="ck1" class="close_btn">닫기</label>
                <input type="text" id="keyword" class="search_txt">
                <input type="submit" class="search_btn" value="go">
            </div>        
         </form>    
     </div>
     </header>
+    
+    
     <main id="content">
-        <figure id="vs">
+        
+           <input type="radio" name="rdo" id="ra1" class="ra" checked>
+           <input type="radio" name="rdo" id="ra2" class="ra">
+           <input type="radio" name="rdo" id="ra3" class="ra">
+             <input type="radio" name="rdo" id="ra4" class="ra">
+               <input type="radio" name="rdo" id="ra5" class="ra">
+               <figure id="vs">
+               <div class="b_box">
             <ul class="img_box">
-                <li class="item"><img src="img/winedrop.jpg" alt="wine" title="wine"></li>
-                <li class="item"><img src="img/red-wine-1004255_1920.jpg"  alt="wine"title="wine"></li>
-                <li class="item"><img src="img/wine1.jpg" ale="wine"title="wine"></li>
-                <li class="item"><img src="img/wine2.jpg" alt="wine" title="wine"></li>
-                <li class="item"><img src="img/winedrop.jpg" alt="wine" itile="wine"></li>
-                <li class="item"><img src="img/wineglass.jpg" alt="wine"title="wine"></li>
+                <li class="item1"><img src="img/b_5.png" alt="wine" title="wine"></li>
+                <li class="item2"><img src="./img/b_2.png"  alt="wine"title="wine"></li>
+               <li class="item3"><img src="img/b_3.png" alt="wine"title="wine"></li>
+               <li class="item4"><img src="img/b_4.png" alt="wine"title="wine"></li>
+               <li class="item5"><img src="img/b_1.png" alt="wine"title="wine"></li>
             </ul>
-            <ul class="btn_box">
-                <li class="btn"><button></button></li>
-                <li class="btn"><button></button></li>
-                <li class="btn"><button></button></li>
-                <li class="btn"><button></button></li>
-                <li class="btn"><button></button></li>
-                <li class="btn"><button></button></li>
-            </ul>
+            <div class="wave"></div>
+            
+            	<div class="la_box">
+            	<label class="bel1" for="ra1"></label>
+            	<label class="bel2" for="ra2"></label>
+            	<label class="bel3" for="ra3"></label>
+            	<label class="bel4" for="ra4"></label>
+            	<label class="bel5" for="ra5"></label>
+                
+                   </div>
+                   
+            </div>
         </figure>
         <div class="vs_box">
-            <div class="tit_box"></div>
-            <h2 class="vs_tit"></h2>
-            <p class="vs_com"></p>
+            <div class="tit_box">
+            <h2 class="vs_tit">2019 Deajeon International  <br> Wine Festival</h2>
+            
+            </div>
             <ul class="icon_box">
-                <li class="icon_fr"><a href=""><img src="./icon/wine-glass-64.png" alt="dd"></a></li>
-                <li class="icon_fr"><a href=""><img src="./icon/winglass2.png" alt="dd"></a></li>
-                <li class="icon_fr"><a href=""><img src="./icon/winglass2.png" alt="dd"></a></li>
+                <li class="icon_fr">
+                 
+                    <a href="" class="r_con1" ></a>  <p>프로그램일정</p>
+                </li>
+                <li class="icon_fr"><a href="" class="r_con2"></a>
+                <p>참가신청</p></li>
+                <li class="icon_fr"><a href="" class="r_con3"></a><p>상담신청</p></li>
             </ul>
         </div>
-        <div class="curve"></div>
+      <div class="l_box">
+       
         <ul class="col_box">
-            <li>
+            <li id="col1">
                 <div class="col_fr">
-                    <h3 class="col_tit"></h3>
-                    <p class="col_com"></p>
+                    <h3 class="col_tit">INTRODUTION</h3>
+                    <p class="col_com">대전와인페스티벌 행사소개</p>
                 </div>
                 <ul class="lst">
-                    <li><a href="">
-                            <img src="./icon/trophy.png" alt="dd">
-                            <h4 class="cate_tit"></h4>
-                            <p class="cate_com"></p>
-                        </a></li>
-                    <li><a href="">
-                            <img src="./icon/conference.png" alt="fd">
-                            <h4 class="cate_tit"></h4>
-                            <p class="cate_com"></p>
-                        </a></li>
-                    <li><a href="">
-                            <img src="./icon/trophy.png" alt="">
-                            <h4 class="cate_tit"></h4>
-                            <p class="cate_com"></p>
-                        </a></li>
+                    <li class="con_text">
+                            <a href="">
+                           
+                             <img class="icon" src="./icon/trophy.png" alt="">
+                             
+                             <h4 class="cate_tit">아시아 와인 트로피</h4>
+                             <p class="cate_com">Asia Wine Trophy</p>
+                          
+                         </a>
+                         </li>
+                     <li class="con_text">
+                            <a href="">
+                             <img class="icon"src="./icon/conference.png" alt="">
+                             <h4 class="cate_tit">와인컨퍼런스</h4>
+                             <p class="cate_com">Asia Wine conference</p>
+                         </a>
+                         </li>
+                     <li class="con_text">
+                            <a href="">
+                             <img class="icon" src="./icon/wine-glass-64.png" alt="">
+                             <h4 class="cate_tit">소물리에경연대회</h4>
+                             <p class="cate_com">Best Sommelier Contest</p>
+                         </a>
+                         </li>
+                   
                 </ul>
             </li>
-            <!--special event-->
-            <li>special event
+            <!--special event_one-->
+            <li id="col2">
                 <div class="col_fr">
-                    <h3 class="col_tit"></h3>
-                    <p class="col_com"></p>
+                    <h3 class="col_tit">SPECAIL EVENT</h3>
+                    <p class="col_com">매일매일 특별한 행사!</p>
                 </div>
                  <ul class="lst">
                      <li><a href="">
-                             <img src="./icon/trophy.png" alt="">
-                             <h4 class="cate_tit"></h4>
-                             <p class="cate_com"></p>
-                         </a></li>
-                     <li><a href="">
-                             <img src="./icon/conference.png" alt="">
-                             <h4 class="cate_tit"></h4>
-                             <p class="cate_com"></p>
-                         </a></li>
-                     <li><a href="">
-                             <img src="./icon/winglass2.png" alt="">
-                             <h4 class="cate_tit"></h4>
-                             <p class="cate_com"></p>
-                         </a></li>
+                          
+                            <h4 class="cate_tit">행사개요</h4>
+                            <p class="cate_com"></p>
+                        </a></li>
+                    <li><a href="">
+                            
+                            <h4 class="cate_tit">부대행사</h4>
+                            <p class="cate_com"></p>
+                        </a></li>
+                    <li><a href="">
+                         
+                            <h4 class="cate_tit">특별공연</h4>
+                            <p class="cate_com"></p>
+                        </a></li>
                  </ul>
             </li>
-            <li>
+            <li id="col3">
                 <div class="col_fr">
-                    <h3 class="col_tit"></h3>
+                    <h3 class="col_tit">NOTICE</h3>
                     <p class="col_com"></p>
                 </div>
                 <!--notice-->
@@ -235,26 +434,29 @@
                  </ul>
             </li>
         </ul>
-   
+   </div>
     </main>
-    
-</body>
-<!-- footer-->
-<footer id="ft">
+    <footer id="ft">
     <div class="ft_wrap">
         <div class="ft_com">
-            
+             <a href="" class="last_log"><img src="./" alt=""></a>
         </div>
     </div>
     <div class="ft_mid">
         <nav id="fnb">
             <ul>
                 <li><a href="">개인정보처리방침</a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li><a href="">영상정보처리기기 운영 관리방침</a></li>
+                <li><a href="">사이트맵</a></li>
             </ul>
         </nav>
-        <p class="copyright">대전시 둔산동 </p>
+        <p class="copyright">Daejeon International Wine Festival
+34125 대전광역시 유성구 엑스포로 107(도룡동 4-19)
+Fair042-250-1358/1359 E-mail djwinefair@gmail.com
+WINE FESTIVAL All rights reserved. </p>
     </div>
 </footer>
+</body>
+<!-- footer-->
+
 </html>

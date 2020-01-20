@@ -7,7 +7,7 @@
 .page1{max-height: 900px}
 #vs{position: relative;}
 .pic{transition: 0.5s;     background-color: #fbe7e8;width: 100w;height: 850px;position: relative;}
-.woman{position: absolute;display:block;height: 100%;left: 5%;animation: wo 1s linear;animation-fill-mode: both;}
+.woman{position: absolute;display:block;height: 100%;left: 5%;animation: wo 1s linear;animation-fill-mode: both;transition:0.5s}
 }
 .txt_box{position: absolute; z-index: 50px;width: 550px; height: 400px;left:4%;top:20%;font-size: 30px;text-shadow: 10px 10px 10px #fff, 15px 15px 10px #333;animation:txt cubic-bezier(0.4,0,0.4,1) 1000ms 200ms;animation-fill-mode: both;}
 
@@ -21,7 +21,7 @@
 }
 @keyframes wo { 
     from{opacity:0;transform: translate(500px,0px);}
-    to{opacity: 1; transform: translate(100px,0px);}
+    to{opacity: 1; transform: translate(0px,0px);}
 
 }
     

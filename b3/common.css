@@ -42,7 +42,14 @@ img{margin: 0;padding: 0;bottom: 0;outline:0;max-width:100%;}
 .menu li{height: 30px;margin: 30px;}
 .menu li a{color:white}
 .menu li a:hover{color: black; font-weight: bold;}
-.bottom{width: 200px;height: 100px;margin-top: 400px;margin-left: 47%;position: relative;}
+.bottom{width: 200px;height: 100px;margin-top: 400px;margin-left: 47%;position: relative;    width: 170px;
+    height: 100px;
+    margin-top: px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    top: 350px;
+left:1%}
 .menu li:hover {background-color: rgba(225,225,225,0.5);transition: 0.5s}
 
 
